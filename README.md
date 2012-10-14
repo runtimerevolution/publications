@@ -4,7 +4,7 @@ Publications
 
 [Publications](http://github.com/karma/publications) is a library for Rails, enabling you to easily add publication control to your models. You can control publication based on activation and deactivation dates, a boolean flag, or a combination of both.
 
-The project includes helpers for a few CRUD runtime generators (such as ActiveAdmin, ActiveScaffold)
+Support is included for CRUD runtime generators (such as ActiveAdmin, ActiveScaffold)
 
 
 Installation
@@ -21,28 +21,30 @@ Overview
 
 After Publications is installed, it's easy to add publication support to your models. Just add this to your class:
 
-	name_of_method
+	has_publish_control
 
 Example:
 
 	class Book
-		name_of_method	# This is all it takes :)
+	  has_publish_control	# This is all it takes :)
 	end
 	
 You'll be able to do the following:
 
 	book = Book.new
 	book.active = true
+	book.activated_at = 10.days.from_now
+	book.disabled_at = 20.days.from_now
 	book.save!
 	
 	Book.active # will return all active books 
 	
-	Book.find_all # will return only published books, if creation of a global scope has been enabled
+	Book.all # will return only published books, if creation of a global scope has been enabled
 
 Migrations
 ---
 
-A few columns will be needed in your tables to handle publications. To add them, just add the following to your migrations (either on create_table or change_table):
+A few columns will be needed in your tables to handle publications. To add them, just add the following to your migrations (either on createtable or changetable):
 
 	t.publications
 	
@@ -56,7 +58,7 @@ Example
 	  end
 
 	  def self.down
-		drop_table :books
+		TODO
 	  end
 	end
 	
@@ -74,14 +76,37 @@ GUI support
 
 The project includes helpers for a few CRUD runtime generators (such as ActiveAdmin, ActiveScaffold).
 
+To use with ActiveAdmin, include the following in your form configuration:
+
+	f.inputs "Publication" do
+      f.publications  
+    end
+
+To use with ActiveScaffold, include the following in your form configuration:
+
+	TBD
 
 
-* Suporte integrado para ActiveAdmin
-* Testes
-* Migrações down
-* Indices
+Roadmap / TODO 
+---
+
+Significant improvements
+
+* Support for publication workflow (aprovals)
+* Support for other conditions besides dates and boolean flag
+* Support for configurable publishing conditions
+* Support for users and groups (publish for just a given set of people)
+* Integration with fine-grained access control framework
+
+
+Small improvements
+
+* Add ActiveScaffold support (and eventually RailsAdmin)
+* Add more tests
+* Implement down migrations
+* Add indexes
+* Default scopes
+* More configuration options
 
 ----
 
-* Suporte para controlar para quem se publica (uso mais avançado)
-* Default scopes
