@@ -2,7 +2,7 @@
 Publications
 ====
 
-[Publications](http://github.com/karma/publications) is a library for Rails, enabling you to easily add publication control to your models. You can control publication based on activation and deactivation dates, a boolean flag, or a combination of both.
+[Publications](http://github.com/runtimerevolution/publications) is a library for Rails, enabling you to easily add publication control to your models. You can control publication based on activation and deactivation dates, a boolean flag, or a combination of both.
 
 Support is included for CRUD runtime generators (such as ActiveAdmin, ActiveScaffold)
 
