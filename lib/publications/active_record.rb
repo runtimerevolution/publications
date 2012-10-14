@@ -1,4 +1,3 @@
-require 'orm_adapter/adapters/active_record'
 require 'publications/core'
 
 module Publications
