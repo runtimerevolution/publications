@@ -9,4 +9,5 @@ Gem::Specification.new do |s|
   s.date              = '2012-10-13'
   s.require_paths     = %w(lib)
   s.files             = Dir["{lib}/**/*"]
-  end
+  s.authors           = ['Runtime Revolution']
+end
