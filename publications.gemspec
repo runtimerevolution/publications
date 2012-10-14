@@ -9,10 +9,4 @@ Gem::Specification.new do |s|
   s.date              = '2012-10-13'
   s.require_paths     = %w(lib)
   s.files             = Dir["{lib}/**/*"]
-  
-  # Runtime dependencies
-  #s.add_dependency             'refinerycms-core',    '~> 2.0.7'
-
-  # Development dependencies (usually used for testing)
-  #s.add_development_dependency 'refinerycms-testing', '~> 2.0.7'
-end
+  end

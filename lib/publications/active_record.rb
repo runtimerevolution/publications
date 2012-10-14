@@ -32,9 +32,7 @@ module Publications
         end
         
         def remove_publications
-          columns.delete(:active, :boolean) # => not working
-          #column :activated_at, :datetime, { :null => true }
-          #column :disabled_at, :datetime, { :null => true }                  
+          # TODO                
         end
         
       end

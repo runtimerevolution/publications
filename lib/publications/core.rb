@@ -26,6 +26,9 @@ module Publications
       def active
         active_by_flag.active_by_dates
       end
+      
+      #TODO - add inactive
+      
     end
 
   end
