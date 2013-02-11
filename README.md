@@ -47,7 +47,7 @@ A few columns will be needed in your tables to handle publications. To add them,
 	t.publications
 ```	
 Example
-```	
+```ruby	
 	class AddPublicationsToBooks < ActiveRecord::Migration
 	  def self.up
 	    create_table :books do |t|
