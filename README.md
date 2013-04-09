@@ -105,5 +105,7 @@ Small improvements
 * Default scopes
 * More configuration options
 
-----
+# License
+Copyright © 2013 [Runtime Revolution](http://www.runtime-revolution.com), released under the MIT license.
 
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/f92ce23c6b8bcf698172ac7cb9e0805c "githalytics.com")](http://githalytics.com/runtimerevolution/publications)
