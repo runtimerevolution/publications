@@ -11,7 +11,7 @@ module Publications
 
     def self.included(base)
       base.class_eval do
-        scope :active_by_flag, :conditions => { :active => true }
+        scope :active_by_flag, -> { where(:active => true) }
         scope :active_by_dates, lambda { { :conditions => [" #{self.table_name}.id not in ( select #{self.table_name}.id 
                                                                                       from #{self.table_name} 
                                                                                       where #{self.table_name}.activated_at > ? 
