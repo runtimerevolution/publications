@@ -20,6 +20,15 @@ module Publications
         }
 
       end
+      
+    end
+
+    # TODO refactor
+    def is_inactive_since(datetime)
+      !active &&
+      updated_at < datetime &&
+      (activated_at == nil || activated_at  < datetime) &&
+      (disabled_at  == nil || disabled_at   < datetime)
     end
 
   end
