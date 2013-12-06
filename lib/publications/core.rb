@@ -27,8 +27,16 @@ module Publications
         active_by_flag.active_by_dates
       end
       
-      #TODO - add inactive
+      #TODO - add inactive 
       
+    end
+
+    # TODO refactor
+    def is_inactive_since(datetime)
+      !active &&
+      updated_at < datetime &&
+      (activated_at == nil || activated_at  < datetime) &&
+      (disabled_at  == nil || disabled_at   < datetime)
     end
 
   end
